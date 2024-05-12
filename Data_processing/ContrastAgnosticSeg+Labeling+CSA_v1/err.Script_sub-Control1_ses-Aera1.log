@@ -1,0 +1,94 @@
+
+--
+Spinal Cord Toolbox (6.2)
+
+sct_deepseg -i ./output/TEST/sub-Control1_ses-Aera1/contrast_agnostic_seg.nii.gz -task seg_sc_contrast_agnostic -o ./output/TEST/sub-Control1_ses-Aera1/contrast_agnostic_seg.nii.gz_seg.nii.gz
+--
+
+Creating temporary folder (/var/folders/1q/6vxfb5k57tjdzgdv6zv49t6m0000gn/T/sct_2024-05-09_20-37-47_sct_deepseg_kmpn5zfr)
+Copied ./output/TEST/sub-Control1_ses-Aera1/contrast_agnostic_seg.nii.gz to /var/folders/1q/6vxfb5k57tjdzgdv6zv49t6m0000gn/T/sct_2024-05-09_20-37-47_sct_deepseg_kmpn5zfr/contrast_agnostic_seg.nii.gz
+Starting inference...
+Inference done.
+Total inference time: 0 minute(s) 52 seconds
+Saving results to: /var/folders/1q/6vxfb5k57tjdzgdv6zv49t6m0000gn/T/sct_2024-05-09_20-37-47_sct_deepseg_kmpn5zfr/contrast_agnostic_seg_seg.nii.gz
+[33mImage header specifies datatype 'float32', but array is of type '<class 'numpy.uint8'>'. Header metadata will be overwritten to use '<class 'numpy.uint8'>'.[0m
+[33mFile ./output/TEST/sub-Control1_ses-Aera1/contrast_agnostic_seg.nii.gz_seg.nii.gz already exists. Will overwrite it.[0m
+
+Done! To view results, type:
+fsleyes output/TEST/sub-Control1_ses-Aera1/contrast_agnostic_seg.nii.gz -cm greyscale output/TEST/sub-Control1_ses-Aera1/contrast_agnostic_seg.nii.gz_seg.nii.gz -cm red -a 70.0 &
+
+
+--
+Spinal Cord Toolbox (6.2)
+
+sct_label_vertebrae -i ./output/TEST/sub-Control1_ses-Aera1/contrast_agnostic_seg.nii.gz -s ./output/TEST/sub-Control1_ses-Aera1/contrast_agnostic_seg.nii.gz_seg.nii.gz -ofolder ./label_vertebrae -c t1 -qc ./qc_label_vertebrae
+--
+
+Creating temporary folder (/var/folders/1q/6vxfb5k57tjdzgdv6zv49t6m0000gn/T/sct_2024-05-09_20-39-27_label-vertebrae_0apj8sbs)
+
+Copying input data to tmp folder...
+
+Straighten spinal cord...
+Creating temporary folder (/var/folders/1q/6vxfb5k57tjdzgdv6zv49t6m0000gn/T/sct_2024-05-09_20-39-27_straighten-spinalcord_kedie189)
+Copy files to tmp folder...
+Fitting centerline using B-spline approximation
+Error on approximation = 0.78 mm
+Error on approximation = 0.38 mm
+Error on approximation = 0.18 mm
+Error on approximation = 0.08 mm
+Error on approximation = 0.05 mm
+Error on approximation = 0.03 mm
+Error on approximation = 0.03 mm
+Error on approximation = 0.02 mm
+Error on approximation = 0.02 mm
+Create the straight space and the safe zone
+Length of spinal cord: 65.66808998726312
+Size of spinal cord in z direction: 65.07476253480226
+Ratio length/size: 1.0091176276232054
+Safe zone boundaries (curved space): [-101.00188064615924, -35.92711811135698]
+Safe zone boundaries (straight space): [-101.29854437238967, -35.630454385126555]
+Pad input volume to account for spinal cord length...
+Time to generate centerline: 3.0 ms
+Warping field generated: tmp.curve2straight.nii.gz
+Warping field generated: tmp.straight2curve.nii.gz
+Apply transformation to input image...
+/Users/mathilde/sct_6.2/bin/isct_antsApplyTransforms -d 3 -i data.nii -o tmp.anat_rigid_warp.nii.gz -t tmp.curve2straight.nii.gz -r tmp.centerline_pad_crop.nii.gz -n 'BSpline[3]' # in /private/var/folders/1q/6vxfb5k57tjdzgdv6zv49t6m0000gn/T/sct_2024-05-09_20-39-27_straighten-spinalcord_kedie189
+Generate output files...
+mv /var/folders/1q/6vxfb5k57tjdzgdv6zv49t6m0000gn/T/sct_2024-05-09_20-39-27_straighten-spinalcord_kedie189/tmp.curve2straight.nii.gz ./warp_curve2straight.nii.gz
+File created: ./warp_curve2straight.nii.gz
+mv /var/folders/1q/6vxfb5k57tjdzgdv6zv49t6m0000gn/T/sct_2024-05-09_20-39-27_straighten-spinalcord_kedie189/tmp.straight2curve.nii.gz ./warp_straight2curve.nii.gz
+File created: ./warp_straight2curve.nii.gz
+cp /var/folders/1q/6vxfb5k57tjdzgdv6zv49t6m0000gn/T/sct_2024-05-09_20-39-27_straighten-spinalcord_kedie189/tmp.anat_rigid_warp.nii.gz ./straight_ref.nii.gz
+File created: ./data_straight.nii
+Remove temporary files...
+rm -rf /var/folders/1q/6vxfb5k57tjdzgdv6zv49t6m0000gn/T/sct_2024-05-09_20-39-27_straighten-spinalcord_kedie189
+
+Resample to 0.5mm isotropic...
+load data...
+
+Apply straightening to segmentation...
+/Users/mathilde/sct_6.2/bin/isct_antsApplyTransforms -d 3 -i segmentation.nii -o segmentation_straight.nii -t warp_curve2straight.nii.gz -r data_straightr.nii -n Linear # in /private/var/folders/1q/6vxfb5k57tjdzgdv6zv49t6m0000gn/T/sct_2024-05-09_20-39-27_label-vertebrae_0apj8sbs
+[33mFile /private/var/folders/1q/6vxfb5k57tjdzgdv6zv49t6m0000gn/T/sct_2024-05-09_20-39-27_label-vertebrae_0apj8sbs/segmentation_straight.nii already exists. Will overwrite it.[0m
+
+Create label to identify disc...
+Creating temporary folder...
+Creating temporary folder (/var/folders/1q/6vxfb5k57tjdzgdv6zv49t6m0000gn/T/sct_2024-05-09_20-40-03_detect-c2c3_hk3dfkhu)
+Run C2-C3 detector...
+[33mC2-C3 not detected...[0m
+Remove temporary files...
+rm -rf /var/folders/1q/6vxfb5k57tjdzgdv6zv49t6m0000gn/T/sct_2024-05-09_20-40-03_detect-c2c3_hk3dfkhu
+Automatic C2-C3 detection failed. Please provide manual label with sct_label_utils
+
+--
+Spinal Cord Toolbox (6.2)
+
+sct_process_segmentation -i ./output/TEST/sub-Control1_ses-Aera1/contrast_agnostic_seg.nii.gz_seg.nii.gz -vert 2:3 -vertfile ./output/TEST/sub-Control1_ses-Aera1/contrast_agnostic_seg.nii.gz_seg_labeled.nii.gz -o csa_c2c3.csv -qc ./qc_process_segmentation
+--
+
+[33mVertebral level file ./output/TEST/sub-Control1_ses-Aera1/contrast_agnostic_seg.nii.gz_seg_labeled.nii.gz does not exist. Vert level information will not be displayed. To use vertebral level information, you may need to run `sct_warp_template` to generate the appropriate level file in your working directory.[0m
+Traceback (most recent call last):
+  File "/Users/mathilde/sct_6.2/spinalcordtoolbox/scripts/sct_process_segmentation.py", line 527, in <module>
+    main(sys.argv[1:])
+  File "/Users/mathilde/sct_6.2/spinalcordtoolbox/scripts/sct_process_segmentation.py", line 397, in main
+    raise FileNotFoundError("The vertebral level file must exist to use `-vert` to group by vertebral level.")
+FileNotFoundError: The vertebral level file must exist to use `-vert` to group by vertebral level.

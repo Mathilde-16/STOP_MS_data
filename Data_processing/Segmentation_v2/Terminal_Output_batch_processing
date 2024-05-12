@@ -1,0 +1,167 @@
+Last login: Mon May  6 17:03:23 on ttys003
+(base) mathilde@MacBookProKI ~ % cd /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2
+(base) mathilde@MacBookProKI Precision_stopms_sct_COPY_2 % chmod +x Script_batch_processing_1.sh                 
+
+(base) mathilde@MacBookProKI Precision_stopms_sct_COPY_2 % sct_run_batch -path-data /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data -path-output /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed -script /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/Script_batch_processing_1.sh
+
+--
+Spinal Cord Toolbox (6.2)
+
+sct_run_batch -path-data /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data -path-output /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed -script /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/Script_batch_processing_1.sh
+--
+
+INFO SYSTEM
+-----------
+OS: osx (macOS-10.16-x86_64-i386-64bit)
+CPU cores: Available: 10 | Threads used by ITK Programs: 1
+RAM: Total 65536 MB | Available 11401 MB | Used 4321 MB
+
+INPUT ARGUMENTS
+---------------
+batch_log: sct_run_batch_log.txt
+config: null
+continue_on_error: 1
+email_from: null
+email_host: smtp.gmail.com:587
+email_to: null
+exclude: null
+exclude_list: null
+ignore_ses: false
+include: null
+include_list: null
+itk_threads: 1
+jobs: 1
+path_data: /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data
+path_output: /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed
+path_segmanual: .
+script: /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/Script_batch_processing_1.sh
+script_args: ''
+subject_prefix: sub-
+v: 1
+zip: false
+
+SCRIPT
+------
+git commit: ?!?
+git origin: ?!?
+Copying script to output folder...
+/Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/Script_batch_processing_1.sh -> /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/Script_batch_processing_1.sh
+Setting execute permissions for script file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/Script_batch_processing_1.sh ...
+
+DATA
+----
+git commit: ?!?
+git origin: ?!?
+
+RUNNING
+-------
+Processing 99 subjects in parallel. (Worker processes used: 1).
+Started at 17h21m45s: sub-Control1_ses-Aera1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-Control1_ses-Aera1.log
+Started at 17h21m46s: sub-Control1_ses-Aera2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-Control1_ses-Aera2.log
+Started at 17h21m46s: sub-Control1_ses-Avanto1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-Control1_ses-Avanto1.log
+Started at 17h21m47s: sub-Control1_ses-Avanto2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-Control1_ses-Avanto2.log
+Started at 17h21m47s: sub-Control1_ses-Trio1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-Control1_ses-Trio1.log
+Started at 17h21m47s: sub-Control1_ses-Trio2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-Control1_ses-Trio2.log
+Started at 17h21m48s: sub-Control2_ses-Aera1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-Control2_ses-Aera1.log
+Started at 17h21m48s: sub-Control2_ses-Aera2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-Control2_ses-Aera2.log
+Started at 17h21m48s: sub-Control2_ses-Avanto1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-Control2_ses-Avanto1.log
+Started at 17h21m48s: sub-Control2_ses-Avanto2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-Control2_ses-Avanto2.log
+Started at 17h21m49s: sub-Control2_ses-Trio1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-Control2_ses-Trio1.log
+Started at 17h21m49s: sub-Control2_ses-Trio2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-Control2_ses-Trio2.log
+Started at 17h21m49s: sub-Control3_ses-Aera1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-Control3_ses-Aera1.log
+Started at 17h21m50s: sub-Control3_ses-Aera2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-Control3_ses-Aera2.log
+Started at 17h21m50s: sub-Control3_ses-Avanto1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-Control3_ses-Avanto1.log
+Started at 17h21m50s: sub-Control3_ses-Avanto2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-Control3_ses-Avanto2.log
+Started at 17h21m51s: sub-Control3_ses-Trio1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-Control3_ses-Trio1.log
+Started at 17h21m51s: sub-Control3_ses-Trio2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-Control3_ses-Trio2.log
+Started at 17h21m51s: sub-MS1_ses-Aera. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS1_ses-Aera.log
+Started at 17h21m51s: sub-MS1_ses-Aera1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS1_ses-Aera1.log
+Started at 17h21m52s: sub-MS1_ses-Aera2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS1_ses-Aera2.log
+Started at 17h21m52s: sub-MS1_ses-Avanto. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS1_ses-Avanto.log
+Started at 17h21m52s: sub-MS1_ses-Avanto1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS1_ses-Avanto1.log
+Started at 17h21m53s: sub-MS1_ses-Avanto2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS1_ses-Avanto2.log
+Started at 17h21m53s: sub-MS1_ses-Trio. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS1_ses-Trio.log
+Started at 17h21m54s: sub-MS1_ses-Trio1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS1_ses-Trio1.log
+Started at 17h21m54s: sub-MS1_ses-Trio2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS1_ses-Trio2.log
+Started at 17h21m54s: sub-MS2_ses-Aera. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS2_ses-Aera.log
+Started at 17h21m55s: sub-MS2_ses-Aera1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS2_ses-Aera1.log
+Started at 17h21m55s: sub-MS2_ses-Aera2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS2_ses-Aera2.log
+Started at 17h21m55s: sub-MS2_ses-Avanto. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS2_ses-Avanto.log
+Started at 17h21m56s: sub-MS2_ses-Avanto1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS2_ses-Avanto1.log
+Started at 17h21m56s: sub-MS2_ses-Avanto2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS2_ses-Avanto2.log
+Started at 17h21m56s: sub-MS2_ses-Trio. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS2_ses-Trio.log
+Started at 17h21m57s: sub-MS2_ses-Trio1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS2_ses-Trio1.log
+Started at 17h21m57s: sub-MS2_ses-Trio2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS2_ses-Trio2.log
+Started at 17h21m58s: sub-MS3_ses-Aera. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS3_ses-Aera.log
+Started at 17h21m58s: sub-MS3_ses-Aera1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS3_ses-Aera1.log
+Started at 17h21m58s: sub-MS3_ses-Aera2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS3_ses-Aera2.log
+Started at 17h21m58s: sub-MS3_ses-Avanto. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS3_ses-Avanto.log
+Started at 17h21m59s: sub-MS3_ses-Avanto1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS3_ses-Avanto1.log
+Started at 17h21m59s: sub-MS3_ses-Avanto2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS3_ses-Avanto2.log
+Started at 17h21m59s: sub-MS3_ses-Trio. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS3_ses-Trio.log
+Started at 17h22m00s: sub-MS3_ses-Trio1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS3_ses-Trio1.log
+Started at 17h22m00s: sub-MS3_ses-Trio2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS3_ses-Trio2.log
+Started at 17h22m00s: sub-MS4_ses-Aera. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS4_ses-Aera.log
+Started at 17h22m01s: sub-MS4_ses-Aera1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS4_ses-Aera1.log
+Started at 17h22m01s: sub-MS4_ses-Aera2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS4_ses-Aera2.log
+Started at 17h22m01s: sub-MS4_ses-Avanto. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS4_ses-Avanto.log
+Started at 17h22m01s: sub-MS4_ses-Avanto1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS4_ses-Avanto1.log
+Started at 17h22m02s: sub-MS4_ses-Avanto2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS4_ses-Avanto2.log
+Started at 17h22m02s: sub-MS4_ses-Trio. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS4_ses-Trio.log
+Started at 17h22m03s: sub-MS4_ses-Trio1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS4_ses-Trio1.log
+Started at 17h22m03s: sub-MS4_ses-Trio2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS4_ses-Trio2.log
+Started at 17h22m03s: sub-MS5_ses-Aera. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS5_ses-Aera.log
+Started at 17h22m03s: sub-MS5_ses-Aera1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS5_ses-Aera1.log
+Started at 17h22m04s: sub-MS5_ses-Aera2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS5_ses-Aera2.log
+Started at 17h22m04s: sub-MS5_ses-Avanto. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS5_ses-Avanto.log
+Started at 17h22m04s: sub-MS5_ses-Avanto1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS5_ses-Avanto1.log
+Started at 17h22m04s: sub-MS5_ses-Avanto2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS5_ses-Avanto2.log
+Started at 17h22m05s: sub-MS5_ses-Trio. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS5_ses-Trio.log
+Started at 17h22m05s: sub-MS5_ses-Trio1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS5_ses-Trio1.log
+Started at 17h22m06s: sub-MS5_ses-Trio2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS5_ses-Trio2.log
+Started at 17h22m06s: sub-MS6_ses-Aera. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS6_ses-Aera.log
+Started at 17h22m06s: sub-MS6_ses-Aera1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS6_ses-Aera1.log
+Started at 17h22m06s: sub-MS6_ses-Aera2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS6_ses-Aera2.log
+Started at 17h22m07s: sub-MS6_ses-Avanto. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS6_ses-Avanto.log
+Started at 17h22m07s: sub-MS6_ses-Avanto1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS6_ses-Avanto1.log
+Started at 17h22m07s: sub-MS6_ses-Avanto2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS6_ses-Avanto2.log
+Started at 17h22m07s: sub-MS6_ses-Trio. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS6_ses-Trio.log
+Started at 17h22m08s: sub-MS6_ses-Trio1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS6_ses-Trio1.log
+Started at 17h22m08s: sub-MS6_ses-Trio2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS6_ses-Trio2.log
+Started at 17h22m09s: sub-MS7_ses-Aera. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS7_ses-Aera.log
+Started at 17h22m09s: sub-MS7_ses-Aera1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS7_ses-Aera1.log
+Started at 17h22m09s: sub-MS7_ses-Aera2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS7_ses-Aera2.log
+Started at 17h22m09s: sub-MS7_ses-Avanto. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS7_ses-Avanto.log
+Started at 17h22m09s: sub-MS7_ses-Avanto1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS7_ses-Avanto1.log
+Started at 17h22m10s: sub-MS7_ses-Avanto2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS7_ses-Avanto2.log
+Started at 17h22m10s: sub-MS7_ses-Trio. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS7_ses-Trio.log
+Started at 17h22m11s: sub-MS7_ses-Trio1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS7_ses-Trio1.log
+Started at 17h22m11s: sub-MS7_ses-Trio2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS7_ses-Trio2.log
+Started at 17h22m11s: sub-MS8_ses-Aera. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS8_ses-Aera.log
+Started at 17h22m11s: sub-MS8_ses-Aera1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS8_ses-Aera1.log
+Started at 17h22m12s: sub-MS8_ses-Aera2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS8_ses-Aera2.log
+Started at 17h22m12s: sub-MS8_ses-Avanto. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS8_ses-Avanto.log
+Started at 17h22m12s: sub-MS8_ses-Avanto1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS8_ses-Avanto1.log
+Started at 17h22m12s: sub-MS8_ses-Avanto2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS8_ses-Avanto2.log
+Started at 17h22m13s: sub-MS8_ses-Trio. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS8_ses-Trio.log
+Started at 17h22m13s: sub-MS8_ses-Trio1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS8_ses-Trio1.log
+Started at 17h22m14s: sub-MS8_ses-Trio2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS8_ses-Trio2.log
+Started at 17h22m14s: sub-MS9_ses-Aera. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS9_ses-Aera.log
+Started at 17h22m14s: sub-MS9_ses-Aera1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS9_ses-Aera1.log
+Started at 17h22m14s: sub-MS9_ses-Aera2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS9_ses-Aera2.log
+Started at 17h22m15s: sub-MS9_ses-Avanto. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS9_ses-Avanto.log
+Started at 17h22m15s: sub-MS9_ses-Avanto1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS9_ses-Avanto1.log
+Started at 17h22m15s: sub-MS9_ses-Avanto2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS9_ses-Avanto2.log
+Started at 17h22m15s: sub-MS9_ses-Trio. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS9_ses-Trio.log
+Started at 17h22m16s: sub-MS9_ses-Trio1. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS9_ses-Trio1.log
+Started at 17h22m16s: sub-MS9_ses-Trio2. See log file /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/log/Script_batch_processing_1_sub-MS9_ses-Trio2.log
+
+Hooray! your batch completed successfully :-)
+
+Started: 2024-05-06 17h21m45s | Ended: 17h22m17s | Duration: 00h00m31s
+
+
+To open the Quality Control (QC) report in a web-browser, type:
+open /Users/mathilde/Desktop/Precision_stopms_sct_COPY_2/data_processed/qc/index.html
+
+(base) mathilde@MacBookProKI Precision_stopms_sct_COPY_2 % 
