@@ -1,0 +1,144 @@
+Last login: Wed May 22 16:47:10 on ttys000
+(base) mathilde@MacBookProKI ~ % cd Desktop
+(base) mathilde@MacBookProKI BIDS_DATASET_seg_copy_3_seg+label % chmod +x config.yml
+(base) mathilde@MacBookProKI BIDS_DATASET_seg_copy_3_seg+label % chmod +x Script_TEST_9
+chmod: Script_TEST_9: No such file or directory
+(base) mathilde@MacBookProKI BIDS_DATASET_seg_copy_3_seg+label % sct_run_batch -script Script_TEST_9.sh -config config.yml -jobs 9
+
+--
+Spinal Cord Toolbox (6.3)
+
+sct_run_batch -script Script_TEST_9.sh -config config.yml -jobs 9
+--
+
+configuring
+/Users/mathilde/sct_6.3/spinalcordtoolbox/scripts/sct_run_batch.py:369: UserWarning: Using the `-config|-c` flag with additional arguments is discouraged
+  warnings.warn(UserWarning('Using the `-config|-c` flag with additional arguments is discouraged'))
+INFO SYSTEM
+-----------
+OS: osx (macOS-10.16-x86_64-i386-64bit)
+CPU cores: Available: 10 | Threads used by ITK Programs: 1
+RAM: Total 65536 MB | Available 12177 MB | Used 3064 MB
+
+INPUT ARGUMENTS
+---------------
+batch_log: sct_run_batch_log.txt
+config: config.yml
+continue_on_error: 1
+email_from: null
+email_host: smtp.gmail.com:587
+email_to: null
+exclude: null
+exclude_list: null
+ignore_ses: false
+include: null
+include_list: null
+itk_threads: 1
+jobs: 9
+path_data: /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/DATA
+path_output: /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT
+path_segmanual: .
+script: Script_TEST_9.sh
+script_args: ''
+subject_prefix: sub-
+v: 1
+zip: false
+
+SCRIPT
+------
+git commit: ?!?
+git origin: ?!?
+Copying script to output folder...
+/Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/Script_TEST_9.sh -> /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/Script_TEST_9.sh
+Setting execute permissions for script file Script_TEST_9.sh ...
+
+DATA
+----
+git commit: ?!?
+git origin: ?!?
+
+RUNNING
+-------
+Processing 72 subjects in parallel. (Worker processes used: 9).
+Started at 16h51m52s: sub-Control01_ses-aera01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-Control01_ses-aera01.log
+Started at 16h51m52s: sub-Control01_ses-aera02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-Control01_ses-aera02.log
+Started at 16h51m52s: sub-Control01_ses-avanto01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-Control01_ses-avanto01.log
+Started at 16h51m52s: sub-Control01_ses-avanto02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-Control01_ses-avanto02.log
+Started at 16h51m52s: sub-Control01_ses-trio01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-Control01_ses-trio01.log
+Started at 16h51m52s: sub-Control01_ses-trio02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-Control01_ses-trio02.log
+Started at 16h51m52s: sub-Control02_ses-aera01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-Control02_ses-aera01.log
+Started at 16h51m52s: sub-Control02_ses-aera02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-Control02_ses-aera02.log
+Started at 16h51m52s: sub-Control02_ses-avanto01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-Control02_ses-avanto01.log
+Started at 16h55m37s: sub-Control02_ses-avanto02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-Control02_ses-avanto02.log
+Started at 16h55m37s: sub-Control02_ses-trio01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-Control02_ses-trio01.log
+Started at 16h55m39s: sub-Control02_ses-trio02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-Control02_ses-trio02.log
+Started at 16h55m40s: sub-Control03_ses-aera01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-Control03_ses-aera01.log
+Started at 16h55m42s: sub-Control03_ses-aera02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-Control03_ses-aera02.log
+Started at 16h55m54s: sub-Control03_ses-avanto01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-Control03_ses-avanto01.log
+Started at 16h56m00s: sub-Control03_ses-avanto02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-Control03_ses-avanto02.log
+Started at 16h56m19s: sub-Control03_ses-trio01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-Control03_ses-trio01.log
+Started at 16h56m50s: sub-Control03_ses-trio02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-Control03_ses-trio02.log
+Started at 16h59m31s: sub-MS01_ses-aera01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS01_ses-aera01.log
+Started at 16h59m32s: sub-MS01_ses-aera02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS01_ses-aera02.log
+Started at 16h59m38s: sub-MS01_ses-avanto01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS01_ses-avanto01.log
+Started at 16h59m40s: sub-MS01_ses-avanto02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS01_ses-avanto02.log
+Started at 16h59m44s: sub-MS01_ses-trio01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS01_ses-trio01.log
+Started at 16h59m50s: sub-MS01_ses-trio02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS01_ses-trio02.log
+Started at 17h00m04s: sub-MS02_ses-aera01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS02_ses-aera01.log
+Started at 17h00m56s: sub-MS02_ses-aera02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS02_ses-aera02.log
+Started at 17h01m02s: sub-MS02_ses-avanto01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS02_ses-avanto01.log
+Started at 17h03m48s: sub-MS02_ses-avanto02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS02_ses-avanto02.log
+Started at 17h03m57s: sub-MS02_ses-trio01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS02_ses-trio01.log
+Started at 17h04m05s: sub-MS02_ses-trio02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS02_ses-trio02.log
+Started at 17h04m06s: sub-MS03_ses-aera01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS03_ses-aera01.log
+Started at 17h04m14s: sub-MS03_ses-aera02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS03_ses-aera02.log
+Started at 17h04m31s: sub-MS03_ses-avanto01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS03_ses-avanto01.log
+Started at 17h04m38s: sub-MS03_ses-avanto02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS03_ses-avanto02.log
+Started at 17h05m47s: sub-MS03_ses-trio01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS03_ses-trio01.log
+Started at 17h05m59s: sub-MS03_ses-trio02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS03_ses-trio02.log
+Started at 17h06m04s: sub-MS04_ses-aera01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS04_ses-aera01.log
+Started at 17h07m34s: sub-MS04_ses-aera02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS04_ses-aera02.log
+Started at 17h07m45s: sub-MS04_ses-avanto01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS04_ses-avanto01.log
+Started at 17h07m46s: sub-MS04_ses-avanto02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS04_ses-avanto02.log
+Started at 17h07m58s: sub-MS04_ses-trio01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS04_ses-trio01.log
+Started at 17h08m13s: sub-MS04_ses-trio02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS04_ses-trio02.log
+Started at 17h09m17s: sub-MS05_ses-aera01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS05_ses-aera01.log
+Started at 17h09m29s: sub-MS05_ses-aera02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS05_ses-aera02.log
+Started at 17h09m30s: sub-MS05_ses-avanto01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS05_ses-avanto01.log
+Started at 17h10m21s: sub-MS05_ses-avanto02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS05_ses-avanto02.log
+Started at 17h11m16s: sub-MS05_ses-trio01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS05_ses-trio01.log
+Started at 17h11m25s: sub-MS05_ses-trio02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS05_ses-trio02.log
+Started at 17h12m15s: sub-MS06_ses-aera01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS06_ses-aera01.log
+Started at 17h12m24s: sub-MS06_ses-aera02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS06_ses-aera02.log
+Started at 17h12m37s: sub-MS06_ses-avanto01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS06_ses-avanto01.log
+Started at 17h13m03s: sub-MS06_ses-avanto02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS06_ses-avanto02.log
+Started at 17h13m14s: sub-MS06_ses-trio01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS06_ses-trio01.log
+Started at 17h13m35s: sub-MS06_ses-trio02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS06_ses-trio02.log
+Started at 17h14m34s: sub-MS07_ses-aera01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS07_ses-aera01.log
+Started at 17h15m09s: sub-MS07_ses-aera02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS07_ses-aera02.log
+Started at 17h15m16s: sub-MS07_ses-avanto01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS07_ses-avanto01.log
+Started at 17h15m50s: sub-MS07_ses-avanto02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS07_ses-avanto02.log
+Started at 17h16m18s: sub-MS07_ses-trio01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS07_ses-trio01.log
+Started at 17h16m20s: sub-MS07_ses-trio02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS07_ses-trio02.log
+Started at 17h17m06s: sub-MS08_ses-aera01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS08_ses-aera01.log
+Started at 17h17m14s: sub-MS08_ses-aera02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS08_ses-aera02.log
+Started at 17h17m14s: sub-MS08_ses-avanto01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS08_ses-avanto01.log
+Started at 17h18m55s: sub-MS08_ses-avanto02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS08_ses-avanto02.log
+Started at 17h19m01s: sub-MS08_ses-trio01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS08_ses-trio01.log
+Started at 17h19m03s: sub-MS08_ses-trio02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS08_ses-trio02.log
+Started at 17h19m06s: sub-MS09_ses-aera01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS09_ses-aera01.log
+Started at 17h19m46s: sub-MS09_ses-aera02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS09_ses-aera02.log
+Started at 17h19m57s: sub-MS09_ses-avanto01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS09_ses-avanto01.log
+Started at 17h21m07s: sub-MS09_ses-avanto02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS09_ses-avanto02.log
+Started at 17h21m13s: sub-MS09_ses-trio01. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS09_ses-trio01.log
+Started at 17h21m18s: sub-MS09_ses-trio02. See log file /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/log/Script_TEST_9_sub-MS09_ses-trio02.log
+
+Hooray! your batch completed successfully :-)
+
+Started: 2024-05-22 16h51m52s | Ended: 17h23m54s | Duration: 00h32m02s
+
+
+To open the Quality Control (QC) report in a web-browser, type:
+open /Users/mathilde/Desktop/BIDS_DATASET_seg_copy_3_seg+label/OUTPUT/qc/index.html
+
+(base) mathilde@MacBookProKI BIDS_DATASET_seg_copy_3_seg+label % 
