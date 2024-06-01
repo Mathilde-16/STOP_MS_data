@@ -1,6 +1,4 @@
 #!/bin/sh
-
-#  Script.sh
 #  Created by Mathilde Brossard on 2024-05-21.
 
 # The following global variables are retrieved from the caller sct_run_batch

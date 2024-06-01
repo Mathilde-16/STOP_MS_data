@@ -1,6 +1,4 @@
 #!/bin/sh
-
-#  Script_TEST.sh
 #  Created by Mathilde Brossard on 2024-05-20.
 
 
@@ -69,26 +67,25 @@ sct_create_mask -i "$T1_image" -p centerline,"${T1_image%.*}_seg.nii.gz" -size 3
 # 3. Crop the image around the mask to focus on the region of interest
 sct_crop_image -i "$T1_image" -m "${T1_image%.*}_mask.nii.gz" -o "${T1_image%.*}_crop.nii.gz"
 
-# 4. Registration of the cropped T1 to a template or another modality (assuming the template image is located one directory up
-TEMPLATE_IMAGE="../template.nii.gz"
-if [ -f "$TEMPLATE_IMAGE" ]; then
-    sct_register_multimodal -i "${T1_image%.*}_crop.nii.gz" -d "$TEMPLATE_IMAGE" -o "${T1_image%.*}_registered.nii.gz" -x linear
-else
-echo "Template image not found at $TEMPLATE_IMAGE"
-fi
            
-# 5. Smooth spinal cord along superior-inferior axis
+# 4. Smooth spinal cord along superior-inferior axis
 sct_smooth_spinalcord -i "${T1_image%.*}_crop.nii.gz" -s "${T1_image%.*}_seg.nii.gz" -o "${T1_image%.*}_smooth.nii.gz"
 
-# 6. Flatten the spinal cord in the right-left direction(useful for visualization)
+# 5. Flatten the spinal cord in the right-left direction(useful for visualization)
 sct_flatten_sagittal -i "${T1_image%.*}_crop.nii.gz" -s "${T1_image%.*}_seg.nii.gz"
 mv "${T1_image%.*}_crop_flat.nii.gz" "${T1_image%.*}_flat.nii.gz"
       
       
-# 7. Generate labeled segmentation
+# 6. Generate labeled segmentation
 sct_label_vertebrae -i "$T1_image" -s "${T1_image%.*}_seg.nii.gz" -ofolder label_vertebrae -c t1 -qc ${PATH_QC} -qc-subject ${SUBJECT}
-      
-      
+
+# 7. Create 2 cervical vertebral labels to perform registration to the PAM50 template
+sct_label_utils -i "${T1_image%.*}_seg_labeled.nii.gz" -vert-body 1,3 -o "${T1_image%.*}_labels_vert.nii.gz"
+
+# 8. Register T1 to the PAM50 template
+sct_register_to_template -i "$T1_image" -s "${T1_image%.*}_seg.nii.gz" -l "${T1_image%.*}_labels_vert.nii.gz" -c t1 -qc ${PATH_QC} -qc-subject ${SUBJECT}
+    
+    
 # Go back to parent folder
 cd ..
 
