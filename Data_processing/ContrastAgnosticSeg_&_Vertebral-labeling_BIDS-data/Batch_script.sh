@@ -56,19 +56,7 @@ T1_image=$(find . -type f -name "*_T1w.nii.gz" -print | head -n 1)
 
 
 # Contrast agnostic segmentation
-def sct_deepseg(input_file, output_file, task, qc="", qc_subject=""):
-  return run_segmentation(input_file, output_file, task=task, qc=qc, qc_subject=qc_subject, contrast=None, centerline=None, method=0)
-
-# Deep segmentation of the spinal cord
-def sct_deepseg_sc(input_file, output_file, contrast, centerline, qc="", qc_subject=""):
-  return run_segmentation(input_file, output_file, contrast=contrast, centerline=centerline, qc=qc, qc_subject=qc_subject, task=None, method=1)
-
-def run_segmentation(input_file, output_file, task, contrast, qc="", qc_subject="", method, centerline):
- if method == 0:
-        command = f"sct_deepseg -i $T1_image -task seg_sc_contrast_agnostic -o ${T1_image%.*}_seg.nii.gz -qc ${PATH_QC} -qc-subject ${SUBJECT}"
-    else method == 1:
-      command = f"sct_deepseg_sc -i $T1_image -c t1 -centerline cnn -o ${T1_image%.*}_seg.nii.gz -qc ${PATH_QC} -qc-subject ${SUBJECT}"
-
+sct_deepseg -i "$T1_image" -task seg_sc_contrast_agnostic -o "${T1_image%.*}_seg.nii.gz" -qc ${PATH_QC} -qc-subject ${SUBJECT}
 
  
 # Create a cylindrical mask centered around the spinal cord segmentation
@@ -85,11 +73,10 @@ mv "${T1_image%.*}_crop_flat.nii.gz" "${T1_image%.*}_flat.nii.gz"
 sct_label_vertebrae -i "$T1_image" -s "${T1_image%.*}_seg.nii.gz" -ofolder label_vertebrae -c t1 -qc ${PATH_QC} -qc-subject ${SUBJECT}
  
 
-
-# (ONLY when sct_deepseg_sc is used) Create 2 cervical vertebral labels to perform registration to the PAM50 template
+# (Not necessary if we only compute the CSA) Create 2 cervical vertebral labels to perform registration to the PAM50 template
 sct_label_utils -i "${T1_image%.*}_seg_labeled.nii.gz" -vert-body 1,3 -o "${T1_image%.*}_labels_vert.nii.gz"
 
-# (ONLY when sct_deepseg_sc is used) Register T1 to the PAM50 template
+# (Not necessary if we only compute the CSA) Register T1 to the PAM50 template
 sct_register_to_template -i "$T1_image" -s "${T1_image%.*}_seg.nii.gz" -l "${T1_image%.*}_labels_vert.nii.gz" -c t1 -qc ${PATH_QC} -qc-subject ${SUBJECT}
 
 
@@ -97,6 +84,24 @@ sct_register_to_template -i "$T1_image" -s "${T1_image%.*}_seg.nii.gz" -l "${T1_
 
 # Go back to parent folder
 cd ..
+
+
+# Verify presence of output files and write log file if error
+FILES_TO_CHECK=(
+  "anat/${SUBJECT}_acq-mprage_T1w.nii_seg.nii.gz"
+  "anat/${SUBJECT}_acq-mprage_T1w.nii_mask.nii.gz"
+  "anat/${SUBJECT}_acq-mprage_T1w.nii_crop.nii.gz"
+  "anat/${SUBJECT}_acq-mprage_T1w.nii_crop_flatten.nii.gz"
+  "anat/${SUBJECT}_acq-mprage_T1w.nii_seg_labeled.nii.gz"
+  "anat/${SUBJECT}_acq-mprage_T1w.nii_seg_labeled_discs.nii.gz"
+  "anat/${SUBJECT}_acq-mprage_T1w.nii_labels_vert.nii.gz"
+)
+for file in ${FILES_TO_CHECK[@]}; do
+  if [[ ! -e $file ]]; then
+    echo "${SUBJECT}/${file} does not exist" >> $PATH_LOG/_error_check_output_files.log
+  fi
+done
+
 
 
 # Display useful info for the log
