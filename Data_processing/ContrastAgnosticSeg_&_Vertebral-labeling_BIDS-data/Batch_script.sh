@@ -1,3 +1,5 @@
+#!/bin/sh
+
 
 # The following global variables are retrieved from the caller sct_run_batch
 # but could be overwritten by uncommenting the lines below:
@@ -65,20 +67,20 @@ sct_create_mask -i "$T1_image" -p centerline,"${T1_image%.*}_seg.nii.gz" -size 3
 # Crop the image around the mask to focus on the region of interest
 sct_crop_image -i "$T1_image" -m "${T1_image%.*}_mask.nii.gz" -o "${T1_image%.*}_crop.nii.gz"
 
-# Flatten the spinal cord in the right-left direction (useful for visualization)
-sct_flatten_sagittal -i "${T1_image%.*}_crop.nii.gz" -s "${T1_image%.*}_seg.nii.gz"
-mv "${T1_image%.*}_crop_flat.nii.gz" "${T1_image%.*}_flat.nii.gz"
+# Smooth spinal cord along superior-inferior axis (useful to present specific images following the analysis)
+# sct_smooth_spinalcord -i "${T1_image%.*}_crop.nii.gz" -s "${T1_image%.*}_seg.nii.gz" -o "${T1_image%.*}_smooth.nii.gz"
+
+# Flatten the spinal cord in the right-left direction (useful to present specific images following the analysis) 
+# sct_flatten_sagittal -i "${T1_image%.*}_crop.nii.gz" -s "${T1_image%.*}_seg.nii.gz"
+# mv "${T1_image%.*}_crop_flat.nii.gz" "${T1_image%.*}_flat.nii.gz"
 
 # Generate labeled segmentation
 sct_label_vertebrae -i "$T1_image" -s "${T1_image%.*}_seg.nii.gz" -ofolder label_vertebrae -c t1 -qc ${PATH_QC} -qc-subject ${SUBJECT}
  
+ 
 
-# (Not necessary if we only compute the CSA) Create 2 cervical vertebral labels to perform registration to the PAM50 template
-sct_label_utils -i "${T1_image%.*}_seg_labeled.nii.gz" -vert-body 1,3 -o "${T1_image%.*}_labels_vert.nii.gz"
-
-# (Not necessary if we only compute the CSA) Register T1 to the PAM50 template
-sct_register_to_template -i "$T1_image" -s "${T1_image%.*}_seg.nii.gz" -l "${T1_image%.*}_labels_vert.nii.gz" -c t1 -qc ${PATH_QC} -qc-subject ${SUBJECT}
-
+# Compute average cord CSA between C2 and C3 and other morphometric measures, and normalize them to PAM50 ('-normalize-PAM50' flag)
+sct_process_segmentation -i "${T1_image%.*}_seg.nii.gz" -vert 2:3 -vertfile ${T1_image%.*}._seg_labeled.nii.gz -perslice 1 -normalize-PAM50 1 -o ${PATH_RESULTS}/csa-SC_T1w.csv -append 1
 
 
 
@@ -113,4 +115,5 @@ echo "SCT version: `sct_version`"
 echo "Ran on:      `uname -nsr`"
 echo "Duration:    $(($runtime / 3600))hrs $((($runtime / 60) % 60))min $(($runtime % 60))sec"
 echo "~~~"
+
 
