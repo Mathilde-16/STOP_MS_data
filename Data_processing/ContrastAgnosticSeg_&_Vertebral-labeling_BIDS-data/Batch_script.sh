@@ -22,7 +22,6 @@ SUBJECT_SESSION=$1
 start=`date +%s`
 
 
-
 # Display useful info for the log, such as SCT version, RAM and CPU cores available
 sct_check_dependencies -short
 
@@ -67,13 +66,6 @@ sct_create_mask -i "$T1_image" -p centerline,"${T1_image%.*}_seg.nii.gz" -size 3
 # Crop the image around the mask to focus on the region of interest
 sct_crop_image -i "$T1_image" -m "${T1_image%.*}_mask.nii.gz" -o "${T1_image%.*}_crop.nii.gz"
 
-# Smooth spinal cord along superior-inferior axis (useful to present specific images following the analysis)
-# sct_smooth_spinalcord -i "${T1_image%.*}_crop.nii.gz" -s "${T1_image%.*}_seg.nii.gz" -o "${T1_image%.*}_smooth.nii.gz"
-
-# Flatten the spinal cord in the right-left direction (useful to present specific images following the analysis) 
-# sct_flatten_sagittal -i "${T1_image%.*}_crop.nii.gz" -s "${T1_image%.*}_seg.nii.gz"
-# mv "${T1_image%.*}_crop_flat.nii.gz" "${T1_image%.*}_flat.nii.gz"
-
 # Generate labeled segmentation
 sct_label_vertebrae -i "$T1_image" -s "${T1_image%.*}_seg.nii.gz" -ofolder label_vertebrae -c t1 -qc ${PATH_QC} -qc-subject ${SUBJECT}
  
@@ -93,8 +85,6 @@ FILES_TO_CHECK=(
   "anat/${SUBJECT}_acq-mprage_T1w.nii_seg.nii.gz"
   "anat/${SUBJECT}_acq-mprage_T1w.nii_mask.nii.gz"
   "anat/${SUBJECT}_acq-mprage_T1w.nii_crop.nii.gz"
-# "anat/${SUBJECT}_acq-mprage_T1w.nii_smooth.nii.gz"
-# "anat/${SUBJECT}_acq-mprage_T1w.nii_crop_flatten.nii.gz"
   "anat/${SUBJECT}_acq-mprage_T1w.nii_seg_labeled.nii.gz"
   "anat/${SUBJECT}_acq-mprage_T1w.nii_seg_labeled_discs.nii.gz"
 )
