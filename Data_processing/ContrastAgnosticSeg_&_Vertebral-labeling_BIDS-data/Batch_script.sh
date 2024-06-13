@@ -85,8 +85,8 @@ FILES_TO_CHECK=(
   "anat/${SUBJECT}_acq-mprage_T1w.nii_seg.nii.gz"
   "anat/${SUBJECT}_acq-mprage_T1w.nii_mask.nii.gz"
   "anat/${SUBJECT}_acq-mprage_T1w.nii_crop.nii.gz"
-  "anat/${SUBJECT}_acq-mprage_T1w.nii_seg_labeled.nii.gz"
-  "anat/${SUBJECT}_acq-mprage_T1w.nii_seg_labeled_discs.nii.gz"
+  "anat/label_vertebrae/${SUBJECT}_acq-mprage_T1w.nii_seg_labeled.nii.gz"
+  "anat/label_vertebrae/${SUBJECT}_acq-mprage_T1w.nii_seg_labeled_discs.nii.gz"
 )
 for file in ${FILES_TO_CHECK[@]}; do
   if [[ ! -e $file ]]; then
