@@ -1,0 +1,24 @@
+#!/bin/sh
+
+#  config.yml
+#  Created by Mathilde Brossard on 2024-05-08.
+
+
+# Path to the folder containing the dataset 
+path_data: /Users/mathilde/Desktop/TEST/SPINEPS/DATA
+
+# Path to save the output
+path_output: /Users/mathilde/Desktop/TEST/SPINEPS/derivaties
+
+# Number of jobs for parallel processing
+jobs: 9
+
+# To process specific subjects
+# include-list :
+# exclude-list :
+
+# Each subject folder starts with a prefix
+# subject_prefix: "sub-"
+
+
+
