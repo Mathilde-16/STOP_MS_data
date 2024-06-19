@@ -1,7 +1,7 @@
-#!/bin/sh
+#!/bin/bash
+
 
 # Function to label vertebrae with SPINEPS
-
 label_with_spineps(){
     local img_dir=$(cd "$(dirname "$1")" && pwd)
     local img_name=$(basename "$1")
