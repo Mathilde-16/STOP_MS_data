@@ -4,7 +4,7 @@ Pipeline to run segmentation and vertebral labeling using the last version (6.3)
 The dataset corresponds to brain MRI acquisitions which typically pass C2-C3 and a small part of the images go up to C4.
 
 
-## How to use the script
+## Requirements
 
 ### Following dependencies are required
 - SCT version 6.3 ([Install Spinal Cord Toolbox](https://spinalcordtoolbox.com/user_section/installation.html))
@@ -36,6 +36,9 @@ It's also necessary to create a main folder containing the dataset folder, the s
 └── config.yml
 ```
 
+
+
+## How to use the script
 
 ### First step 
 
