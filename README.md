@@ -23,17 +23,12 @@ path_output:
 
 ```
 
-It's also necessary to create a main folder containing the dataset folder, the script and the config YAML file. Organisation within the main folder should look like this:
+It is also necessary to create a main folder containing the dataset folder, the script and the config YAML file. Organisation within the main folder should look like this:
+
 ```bash
 ├── DATA
-│           
-│           
-├── process_data.sh
-│   
-│           
 └── config.yml
 ```
-
 
 
 ## How to use the script
@@ -41,6 +36,7 @@ It's also necessary to create a main folder containing the dataset folder, the s
 ### First step 
 
 Run processing across all subjects : 
+
 ```bash
 cd PATH/TO/THE/MAIN/FOLDER
 
