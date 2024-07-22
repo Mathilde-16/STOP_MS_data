@@ -42,7 +42,6 @@ cd PATH/TO/THE/MAIN/FOLDER
 
 #To allow permissions 
 chmod +x config.yml 
-chmod +x process_data.sh     
   
 #SCT command to run the script across all subjects
 sct_run_batch -script process_data.sh -config config.yml -jobs 9
