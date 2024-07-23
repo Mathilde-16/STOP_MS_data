@@ -1,3 +1,6 @@
+>[!Warning]
+>This repository was archived. New development is happening here: https://github.com/sct-pipeline/STOP-MS-data
+
 # SCT pipeline for a large-scale clinical dataset
 
 The STOP_MS_data repository contains [process_data.sh](https://github.com/Mathilde-16/STOP_MS_data/blob/4f20ca82a43991f722775eaac831c68f735f8951/Data_processing/ContrastAgnosticSeg_%26_Vertebral-labeling_BIDS-data/Batch_script.sh) batch script for the segmentation and the vertebral labeling of cervical spinal cord, using the spinal cord toolbox.
